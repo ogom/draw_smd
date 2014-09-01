@@ -1,31 +1,39 @@
-# DrawSmd
+# Draw SMD
 
-TODO: Write a gem description
+[![Gem Version](https://badge.fury.io/rb/draw_smd.png)](https://rubygems.org/gems/draw_smd) [![Build Status](https://travis-ci.org/ogom/draw_smd.png?branch=master)](https://travis-ci.org/ogom/draw_smd)
+
+Drawing the Entity-Relationship Diagram of Rails.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
+```
 gem 'draw_smd'
 ```
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install draw_smd
+```
+$ bundle
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Add this line to your `config/routes.rb`:
 
-## Contributing
+```
+mount Drawsmd::Engine, at: '/rails/draw/smd'
+```
 
-1. Fork it ( https://github.com/[my-github-username]/draw_smd/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Draw by selecting the schemas:
+
+![example_smd](http://ogom.github.io/draw_smd/assets/img/example_smd.png)
+
+## Use
+
+* [state_machine](https://github.com/pluginaweek/state_machine)
+
+## License
+
+* MIT

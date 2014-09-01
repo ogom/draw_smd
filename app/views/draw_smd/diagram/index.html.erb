@@ -1,0 +1,36 @@
+<h2>Schemas</h2>
+<p>Drawing the State Machine Diagram</p>
+
+<div class='schemas'>
+  <%= form_tag({}, method: :get, name: 'form_schema') do %>
+  <table id='schema_table' class='schema_table'>
+    <thead>
+      <tr>
+        <th>Schema</th>
+      </tr>
+       <tr class='bottom'>
+        <th>
+          <%= submit_tag :draw, class: 'bottom' %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @schemas.each do |schema| %>
+      <tr>
+        <td>
+          <%= radio_button 'check', 'schema', schema, {id: "check_#{schema}", checked: @schema == schema,
+              onclick: 'check_schema()'} %>
+          <%= label_tag "check[#{schema}]", schema %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>
+</div>
+
+<div class='draw'>
+  <% if @schema.present? %>
+  <%= image_tag(@image_file) %>
+  <% end %>
+</div>
