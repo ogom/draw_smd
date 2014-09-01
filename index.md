@@ -5,7 +5,7 @@ title:  Overview
 
 [![Gem Version](https://badge.fury.io/rb/draw_smd.png)](https://rubygems.org/gems/draw_smd) [![Build Status](https://travis-ci.org/ogom/draw_smd.png?branch=master)](https://travis-ci.org/ogom/draw_smd)
 
-Drawing the Entity-Relationship Diagram of Rails.
+Drawing the State Machine Diagram of Rails.
 
 ## Installation
 
