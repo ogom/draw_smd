@@ -5,10 +5,17 @@ module DrawSmd
         schemas = ActiveRecord::Base.connection.tables
         schemas.delete('schema_migrations')
         schemas.map! {|schema| schema.singularize.camelize}
-        schemas.each do |schema|
-          schemas.delete(schema) unless Object.const_get(schema).respond_to?(:state_machines)
-        end
+        schemas = schemas.inject([]) { |arr, schema|
+          arr << schema if state_machines?(schema)
+          arr
+        }
         schemas.sort
+      end
+
+      def state_machines?(schema)
+        Object.const_get(schema).respond_to?(:state_machines)
+      rescue
+        false
       end
     end
 
