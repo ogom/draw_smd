@@ -29,9 +29,9 @@ Add this line to your config/routes.rb:
 mount DrawSmd::Engine, at: '/rails/draw/smd'
 ```
 
-Draw by selecting the schema:
+Draw by selecting the model:
 
-![example_smd]({{ site.baseurl }}/assets/img/example_smd.png)
+![example]({{ site.baseurl }}/assets/img/example.png)
 
 ## Use
 

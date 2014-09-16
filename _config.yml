@@ -9,6 +9,6 @@ exclude:
 - README.md
 - vendor
 - tmp
-name: Draw SMD
+name: DrawSMD
 copyright: 2014, ogom
 theme: cosmo
